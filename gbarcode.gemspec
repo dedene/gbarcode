@@ -10,7 +10,7 @@ GEM_NAME = "gbarcode" # what ppl will type to install your gem
 RUBYFORGE_PROJECT = "gbarcode" # The unix name for your project
 HOMEPATH = "http://#{RUBYFORGE_PROJECT}.rubyforge.org"
 REV = nil # UNCOMMENT IF REQUIRED: File.read(".svn/entries")[/committed-rev="(d+)"/, 1] rescue nil
-GEM_VERSION = "1.00"
+GEM_VERSION = "1.01"
 RDOC_OPTS = ["--exclude", "\.c$"]
 PKG = "#{GEM_NAME}-#{GEM_VERSION}"
 PKG_FILES = FileList['*.txt', 'doc/**/*.*', 'ext/**/*.c', 'ext/**/*.h', 'ext/**/*.rb']
