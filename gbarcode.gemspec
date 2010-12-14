@@ -22,7 +22,8 @@ Gem::Specification.new do |s|
   s.autorequire = "Gbarcode"
   s.extensions = ["ext/extconf.rb"]
   s.extra_rdoc_files = ["LICENSE", "README"]
-  s.platform = Gem::Platform::RUBY
   s.required_ruby_version = ">= 1.9.2"
   s.rubyforge_project = RUBYFORGE_PROJECT
+  s.homepage = ""
+  
 end
