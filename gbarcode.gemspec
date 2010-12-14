@@ -1,16 +1,3 @@
-AUTH = "Angel Pizarro"  # can also be an array of Authors
-AUTH_EMAIL = "angel@delagoya.com"
-DESC_SHORT = "A barcode library that wraps GNU Barcode using SWIG."
-DESC_LONG = DESC_SHORT + " " + "Most popular encoding schemes are supported (Code 39, UPC, ISBN, etc.). See the README for a full listing." +
-" For more Ruby-ish syntax, you should use the Rbarcode gem."
-
-GEM_NAME = "gbarcode" # what ppl will type to install your gem
-RUBYFORGE_PROJECT = "gbarcode" # The unix name for your project
-HOMEPATH = "http://#{RUBYFORGE_PROJECT}.rubyforge.org"
-REV = nil # UNCOMMENT IF REQUIRED: File.read(".svn/entries")[/committed-rev="(d+)"/, 1] rescue nil
-GEM_VERSION = "1.00"
-RDOC_OPTS = ["--exclude", "\.c$"]
-
 Gem::Specification.new do |s|
   s.name = GEM_NAME
   s.version = GEM_VERSION
