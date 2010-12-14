@@ -19,25 +19,6 @@ REV = nil # UNCOMMENT IF REQUIRED: File.read(".svn/entries")[/committed-rev="(d+
 GEM_VERSION = "1.01"
 RDOC_OPTS = ["--exclude", "\.c$"]
 
-gem_spec = Gem::Specification.new do |s|
-  s.name = GEM_NAME
-  s.version = GEM_VERSION
-  s.summary = DESC_SHORT
-  s.description = DESC_LONG
-  s.author = AUTH
-  s.test_files = FileList['test/**/*']
-  s.files = FileList['*.txt', 'doc/**/*.*', 'ext/**/*.c', 'ext/**/*.h', 'ext/**/*.rb']
-  s.require_paths = [".","ext"]
-  s.autorequire = "Gbarcode"
-  s.extensions = ["ext/extconf.rb"]
-  s.extra_rdoc_files = FileList['*.txt']
-  s.has_rdoc = true
-  s.rdoc_options = RDOC_OPTS
-  s.platform = Gem::Platform::RUBY
-  s.required_ruby_version = ">= 1.8.4"
-  s.rubyforge_project = RUBYFORGE_PROJECT
-end
-
 desc "package the gem"
 Rake::GemPackageTask.new(gem_spec) do |pkg|
   pkg.need_zip = true
