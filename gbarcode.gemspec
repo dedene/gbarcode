@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.summary = DESC_SHORT
   s.description = DESC_LONG
   s.authors = [AUTH, "Jonathan Phillips"]
-  s.files = ['*.txt', 'doc/**/*.*', 'ext/**/*.c', 'ext/**/*.h', 'ext/**/*.rb']
+  #s.files = ['*.txt', 'doc/**/*.*', 'ext/**/*.c', 'ext/**/*.h', 'ext/**/*.rb']
   s.require_paths = [".","ext"]
   s.autorequire = "Gbarcode"
   s.extensions = ["ext/extconf.rb"]
