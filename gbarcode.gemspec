@@ -17,12 +17,12 @@ Gem::Specification.new do |s|
   s.summary = DESC_SHORT
   s.description = DESC_LONG
   s.author = AUTH
-  s.test_files = FileList['test/**/*']
-  s.files = FileList['*.txt', 'doc/**/*.*', 'ext/**/*.c', 'ext/**/*.h', 'ext/**/*.rb']
+  s.test_files = ['test/**/*']
+  s.files = ['*.txt', 'doc/**/*.*', 'ext/**/*.c', 'ext/**/*.h', 'ext/**/*.rb']
   s.require_paths = [".","ext"]
   s.autorequire = "Gbarcode"
   s.extensions = ["ext/extconf.rb"]
-  s.extra_rdoc_files = FileList['*.txt']
+  s.extra_rdoc_files = ['*.txt']
   s.has_rdoc = true
   s.rdoc_options = RDOC_OPTS
   s.platform = Gem::Platform::RUBY
