@@ -1555,7 +1555,7 @@ static VALUE mGbarcode;
 #ifdef __cplusplus
 extern "C" {
 #endif
-#include "rubyio.h"
+#include "ruby/io.h"
 #ifdef __cplusplus
 }
 #endif
@@ -1667,7 +1667,7 @@ SWIG_AsCharPtrAndSize(VALUE obj, char** cptr, size_t* psize, int *alloc)
     
 
 
-    char *cstr = STR2CSTR(obj);
+    char *cstr = StringValuePtr(obj);
     
     size_t size = RSTRING_LEN(obj) + 1;
     if (cptr)  {
@@ -1827,10 +1827,10 @@ _wrap_barcode_print(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = (struct Barcode_Item *)(argp1);
   {
-    OpenFile *of;
+    rb_io_t *of;
     GetOpenFile(argv[1], of);
     rb_io_check_writable(of);
-    arg2 = GetWriteFile(of);
+    arg2 = rb_io_stdio_file(of);
   }
   ecode3 = SWIG_AsVal_int(argv[2], &val3);
   if (!SWIG_IsOK(ecode3)) {
@@ -1879,10 +1879,10 @@ _wrap_barcode_encode_and_print(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = (char *)(buf1);
   {
-    OpenFile *of;
+    rb_io_t *of;
     GetOpenFile(argv[1], of);
     rb_io_check_writable(of);
-    arg2 = GetWriteFile(of);
+    arg2 = rb_io_stdio_file(of);
   }
   ecode3 = SWIG_AsVal_int(argv[2], &val3);
   if (!SWIG_IsOK(ecode3)) {
@@ -1937,10 +1937,10 @@ _wrap_barcode_svg_print(int argc, VALUE *argv, VALUE self) {
   }
   arg1 = (struct Barcode_Item *)(argp1);
   {
-    OpenFile *of;
+    rb_io_t *of;
     GetOpenFile(argv[1], of);
     rb_io_check_writable(of);
-    arg2 = GetWriteFile(of);
+    arg2 = rb_io_stdio_file(of);
   }
   result = (int)Barcode_svg_print(arg1,arg2);
   vresult = SWIG_From_int((int)(result));
