@@ -70,6 +70,13 @@ task :package_win32 => ["hpricot_scan_win32"] do
   end
 end
 
+desc 'Generate a gem file'
+task :package => :gemspec do
+  puts "Building version: #{BLOCKS_VERSION.inspect}"
+  sh "gem build gbarcode.gemspec"
+end
+
+
 CLEAN.include WIN32_PKG_DIR
 
 ### end WIN32 ###
