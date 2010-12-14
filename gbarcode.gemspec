@@ -16,15 +16,12 @@ Gem::Specification.new do |s|
   s.version = GEM_VERSION
   s.summary = DESC_SHORT
   s.description = DESC_LONG
-  s.author = AUTH
-  s.test_files = ['test/**/*']
+  s.authors = [AUTH, "Jonathan Phillips"]
   s.files = ['*.txt', 'doc/**/*.*', 'ext/**/*.c', 'ext/**/*.h', 'ext/**/*.rb']
   s.require_paths = [".","ext"]
   s.autorequire = "Gbarcode"
   s.extensions = ["ext/extconf.rb"]
-  s.extra_rdoc_files = ['*.txt']
-  s.has_rdoc = true
-  s.rdoc_options = RDOC_OPTS
+  s.extra_rdoc_files = ["LICENSE", "README"]
   s.platform = Gem::Platform::RUBY
   s.required_ruby_version = ">= 1.9.2"
   s.rubyforge_project = RUBYFORGE_PROJECT
