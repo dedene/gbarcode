@@ -1,16 +1,12 @@
-require 'rubygems'
-require 'rake'
-require 'rake/clean'
-require 'rake/testtask'
 require 'rake/packagetask'
 require 'rake/gempackagetask'
-require 'rake/rdoctask'
+
 
 GEM_NAME = "gbarcode" # what ppl will type to install your gem
 RUBYFORGE_PROJECT = "gbarcode" # The unix name for your project
 HOMEPATH = "http://#{RUBYFORGE_PROJECT}.rubyforge.org"
 REV = nil # UNCOMMENT IF REQUIRED: File.read(".svn/entries")[/committed-rev="(d+)"/, 1] rescue nil
-GEM_VERSION = "1.01"
+GEM_VERSION = "1.02"
 RDOC_OPTS = ["--exclude", "\.c$"]
 PKG = "#{GEM_NAME}-#{GEM_VERSION}"
 PKG_FILES = FileList['*.txt', 'doc/**/*.*', 'ext/**/*.c', 'ext/**/*.h', 'ext/**/*.rb']
