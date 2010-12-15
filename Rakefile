@@ -1,4 +1,4 @@
-GEM_VERSION = "1.04"
+GEM_VERSION = "1.05"
 
 
 # desc "Run test code"
